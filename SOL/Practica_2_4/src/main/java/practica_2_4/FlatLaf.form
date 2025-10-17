@@ -302,7 +302,7 @@
         </Component>
         <Component class="javax.swing.JPasswordField" name="txtPassHidari">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jPasswordField1"/>
+            <Property name="text" type="java.lang.String" value="contrase&#xf1;a"/>
           </Properties>
           <Events>
             <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPassHidariKeyReleased"/>
@@ -437,7 +437,7 @@
             <Container class="java.awt.Panel" name="panel1">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="99" red="33" type="rgb"/>
+                  <Color blue="66" green="66" red="0" type="rgb"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -462,7 +462,7 @@
             <Container class="java.awt.Panel" name="panel2">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="cc" red="66" type="rgb"/>
+                  <Color blue="0" green="66" red="33" type="rgb"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -701,8 +701,11 @@
         </Component>
         <Component class="javax.swing.JPasswordField" name="txtPassMigi">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jPasswordField1"/>
+            <Property name="text" type="java.lang.String" value="contrase&#xf1;a"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPassMigiActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtCorreoMigi">
           <Properties>
@@ -790,7 +793,7 @@
             <Container class="java.awt.Panel" name="panel3">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="99" red="33" type="rgb"/>
+                  <Color blue="66" green="66" red="0" type="rgb"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -815,7 +818,7 @@
             <Container class="java.awt.Panel" name="panel4">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="cc" red="66" type="rgb"/>
+                  <Color blue="0" green="66" red="33" type="rgb"/>
                 </Property>
               </Properties>
               <Constraints>

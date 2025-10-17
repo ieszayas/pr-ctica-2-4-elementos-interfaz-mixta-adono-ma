@@ -4,6 +4,7 @@
  */
 package practica_2_4;
 
+import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatLightLaf;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -130,7 +131,7 @@ public class FlatLaf extends javax.swing.JFrame {
 
         jContrasenyaHidari.setText("Contraseña:");
 
-        txtPassHidari.setText("jPasswordField1");
+        txtPassHidari.setText("contraseña");
         txtPassHidari.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtPassHidariKeyReleased(evt);
@@ -235,7 +236,7 @@ public class FlatLaf extends javax.swing.JFrame {
             }
         });
 
-        panel1.setBackground(new java.awt.Color(51, 153, 255));
+        panel1.setBackground(new java.awt.Color(0, 102, 102));
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
@@ -250,7 +251,7 @@ public class FlatLaf extends javax.swing.JFrame {
 
         jSplitPaneHidari.setLeftComponent(panel1);
 
-        panel2.setBackground(new java.awt.Color(102, 204, 0));
+        panel2.setBackground(new java.awt.Color(51, 102, 0));
 
         javax.swing.GroupLayout panel2Layout = new javax.swing.GroupLayout(panel2);
         panel2.setLayout(panel2Layout);
@@ -406,7 +407,12 @@ public class FlatLaf extends javax.swing.JFrame {
 
         jContrasenyaMigi.setText("Contraseña:");
 
-        txtPassMigi.setText("jPasswordField1");
+        txtPassMigi.setText("contraseña");
+        txtPassMigi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPassMigiActionPerformed(evt);
+            }
+        });
 
         txtCorreoMigi.setColumns(20);
         txtCorreoMigi.setText("sunombre@gmail.com");
@@ -449,7 +455,7 @@ public class FlatLaf extends javax.swing.JFrame {
             }
         });
 
-        panel3.setBackground(new java.awt.Color(51, 153, 255));
+        panel3.setBackground(new java.awt.Color(0, 102, 102));
 
         javax.swing.GroupLayout panel3Layout = new javax.swing.GroupLayout(panel3);
         panel3.setLayout(panel3Layout);
@@ -464,7 +470,7 @@ public class FlatLaf extends javax.swing.JFrame {
 
         jSplitPaneMigi.setLeftComponent(panel3);
 
-        panel4.setBackground(new java.awt.Color(102, 204, 0));
+        panel4.setBackground(new java.awt.Color(51, 102, 0));
 
         javax.swing.GroupLayout panel4Layout = new javax.swing.GroupLayout(panel4);
         panel4.setLayout(panel4Layout);
@@ -838,6 +844,10 @@ public class FlatLaf extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jSplitPaneHidariPropertyChange
 
+    private void txtPassMigiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPassMigiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPassMigiActionPerformed
+
     private String txtInv(String txt) {
         return new StringBuilder(txt).reverse().toString();
     }
@@ -871,7 +881,7 @@ public class FlatLaf extends javax.swing.JFrame {
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         try {
-            UIManager.setLookAndFeel(new FlatLightLaf());
+            UIManager.setLookAndFeel(new FlatDarkLaf());
         } catch (UnsupportedLookAndFeelException e) {
             e.printStackTrace();
         }
