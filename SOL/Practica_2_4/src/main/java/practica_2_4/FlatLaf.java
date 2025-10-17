@@ -21,6 +21,7 @@ public class FlatLaf extends javax.swing.JFrame {
      */
     public FlatLaf() {
         initComponents();
+        configurarPropiedadesFlatLaf();
     }
 
     /**
@@ -31,7 +32,6 @@ public class FlatLaf extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         jGrupoOpcionHidari = new javax.swing.ButtonGroup();
         jGrupoOpcionMigi = new javax.swing.ButtonGroup();
@@ -52,9 +52,16 @@ public class FlatLaf extends javax.swing.JFrame {
         jOpcion4 = new javax.swing.JCheckBox();
         jOpcion5 = new javax.swing.JCheckBox();
         jOpcion6 = new javax.swing.JCheckBox();
-        jComboListHidari = new javax.swing.JComboBox<>();
-        jSpinner1 = new javax.swing.JSpinner();
+        itemListHidari = new javax.swing.JComboBox<>();
+        numerosHidari = new javax.swing.JSpinner();
         jDesliz = new javax.swing.JSlider();
+        jCheckCorreo = new javax.swing.JCheckBox();
+        jSplitPaneHidari = new javax.swing.JSplitPane();
+        panel1 = new java.awt.Panel();
+        panel2 = new java.awt.Panel();
+        jPorcentajeHidari = new javax.swing.JLabel();
+        jPanelBarraEstado = new javax.swing.JPanel();
+        jListo = new javax.swing.JLabel();
         migi = new javax.swing.JPanel();
         Opciones1Migi = new javax.swing.JLabel();
         jOpcion1Migi = new javax.swing.JRadioButton();
@@ -69,28 +76,31 @@ public class FlatLaf extends javax.swing.JFrame {
         jOpcion4Migi = new javax.swing.JCheckBox();
         txtMigi = new javax.swing.JTextField();
         Texto1Migi = new javax.swing.JLabel();
-        jSpinnerMigi = new javax.swing.JSpinner();
-        jComboListMigi = new javax.swing.JComboBox<>();
+        numerosMigi = new javax.swing.JSpinner();
+        itemListMigi = new javax.swing.JComboBox<>();
         jDeslizMigi = new javax.swing.JSlider();
         jAceptarMigi = new javax.swing.JButton();
         jRedondoMigi = new javax.swing.JButton();
         jButtonAyudaMigi = new javax.swing.JButton();
+        jCheckCorreoMigi = new javax.swing.JCheckBox();
+        jSplitPaneMigi = new javax.swing.JSplitPane();
+        panel3 = new java.awt.Panel();
+        panel4 = new java.awt.Panel();
+        jPorcentajeMigi = new javax.swing.JLabel();
+        jMenuBar = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuArchivo = new javax.swing.JMenu();
+        jMenuItemSalir = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuEdicion = new javax.swing.JMenu();
+        jMenuBorrarT = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(900, 700));
+        setResizable(false);
         setSize(new java.awt.Dimension(900, 700));
 
         hidari.setBorder(javax.swing.BorderFactory.createTitledBorder("GUI Mixta"));
-        hidari.setLayout(new java.awt.GridBagLayout());
-
-        Texto1Hidari.setText("Texto 1:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(33, 27, 0, 0);
-        hidari.add(Texto1Hidari, gridBagConstraints);
 
         txtHidari1.setColumns(20);
         txtHidari1.addActionListener(new java.awt.event.ActionListener() {
@@ -103,27 +113,11 @@ public class FlatLaf extends javax.swing.JFrame {
                 txtHidari1KeyReleased(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 7;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipadx = 219;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(9, 27, 0, 0);
-        hidari.add(txtHidari1, gridBagConstraints);
 
         CorreoHidari.setText("Correo");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(30, 60, 0, 0);
-        hidari.add(CorreoHidari, gridBagConstraints);
 
         txtCorreoHidari.setColumns(20);
-        txtCorreoHidari.setText("sunombre@gmail.com...");
+        txtCorreoHidari.setText("sunombre@gmail.com");
         txtCorreoHidari.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCorreoHidariActionPerformed(evt);
@@ -134,24 +128,8 @@ public class FlatLaf extends javax.swing.JFrame {
                 txtCorreoHidariKeyReleased(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 6;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipadx = 219;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(27, 1, 0, 0);
-        hidari.add(txtCorreoHidari, gridBagConstraints);
 
         jContrasenyaHidari.setText("Contraseña:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 10;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(21, 60, 0, 0);
-        hidari.add(jContrasenyaHidari, gridBagConstraints);
 
         txtPassHidari.setText("jPasswordField1");
         txtPassHidari.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -159,14 +137,6 @@ public class FlatLaf extends javax.swing.JFrame {
                 txtPassHidariKeyReleased(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 10;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipadx = 26;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 1, 0, 0);
-        hidari.add(txtPassHidari, gridBagConstraints);
 
         jAceptarHidari.setText("Aceptar");
         jAceptarHidari.addActionListener(new java.awt.event.ActionListener() {
@@ -174,13 +144,6 @@ public class FlatLaf extends javax.swing.JFrame {
                 jAceptarHidariActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 13;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(27, 32, 0, 0);
-        hidari.add(jAceptarHidari, gridBagConstraints);
 
         jRedondoHidari2.setText("Redondo");
         jRedondoHidari2.addActionListener(new java.awt.event.ActionListener() {
@@ -188,13 +151,6 @@ public class FlatLaf extends javax.swing.JFrame {
                 jRedondoHidari2ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 14;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(27, 27, 0, 0);
-        hidari.add(jRedondoHidari2, gridBagConstraints);
 
         jButtonAyudaHidari.setText("?");
         jButtonAyudaHidari.addActionListener(new java.awt.event.ActionListener() {
@@ -202,21 +158,6 @@ public class FlatLaf extends javax.swing.JFrame {
                 jButtonAyudaHidariActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 16;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(27, 17, 0, 0);
-        hidari.add(jButtonAyudaHidari, gridBagConstraints);
-
-        Opciones.setText("Opciones:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(24, 11, 0, 0);
-        hidari.add(Opciones, gridBagConstraints);
 
         jGrupoOpcionHidari.add(jOpcion1);
         jOpcion1.setText("Opcion 1");
@@ -225,13 +166,6 @@ public class FlatLaf extends javax.swing.JFrame {
                 jOpcion1ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 4;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(10, 60, 0, 0);
-        hidari.add(jOpcion1, gridBagConstraints);
 
         jGrupoOpcionHidari.add(jOpcion2);
         jOpcion2.setText("Opcion 2");
@@ -240,13 +174,6 @@ public class FlatLaf extends javax.swing.JFrame {
                 jOpcion2ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 4;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(13, 60, 0, 0);
-        hidari.add(jOpcion2, gridBagConstraints);
 
         jGrupoOpcionHidari.add(jOpcion3);
         jOpcion3.setText("Opcion 3");
@@ -255,13 +182,6 @@ public class FlatLaf extends javax.swing.JFrame {
                 jOpcion3ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridwidth = 4;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(19, 60, 0, 0);
-        hidari.add(jOpcion3, gridBagConstraints);
 
         jOpcion4.setText("Opcion 4");
         jOpcion4.addActionListener(new java.awt.event.ActionListener() {
@@ -269,13 +189,6 @@ public class FlatLaf extends javax.swing.JFrame {
                 jOpcion4ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(10, 43, 0, 0);
-        hidari.add(jOpcion4, gridBagConstraints);
 
         jOpcion5.setText("Opcion 5");
         jOpcion5.addActionListener(new java.awt.event.ActionListener() {
@@ -283,13 +196,6 @@ public class FlatLaf extends javax.swing.JFrame {
                 jOpcion5ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(13, 43, 0, 0);
-        hidari.add(jOpcion5, gridBagConstraints);
 
         jOpcion6.setText("Opcion 6");
         jOpcion6.addActionListener(new java.awt.event.ActionListener() {
@@ -297,170 +203,225 @@ public class FlatLaf extends javax.swing.JFrame {
                 jOpcion6ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(19, 43, 0, 0);
-        hidari.add(jOpcion6, gridBagConstraints);
 
-        jComboListHidari.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboListHidari.addActionListener(new java.awt.event.ActionListener() {
+        itemListHidari.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        itemListHidari.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboListHidariActionPerformed(evt);
+                itemListHidariActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 27, 0, 0);
-        hidari.add(jComboListHidari, gridBagConstraints);
 
-        jSpinner1.addChangeListener(new javax.swing.event.ChangeListener() {
+        numerosHidari.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                jSpinner1StateChanged(evt);
+                numerosHidariStateChanged(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(12, 27, 0, 0);
-        hidari.add(jSpinner1, gridBagConstraints);
 
         jDesliz.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jDeslizStateChanged(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 13;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipadx = 164;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 32, 0, 0);
-        hidari.add(jDesliz, gridBagConstraints);
+
+        jCheckCorreo.setEnabled(false);
+        jCheckCorreo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckCorreoActionPerformed(evt);
+            }
+        });
+
+        jSplitPaneHidari.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jSplitPaneHidariPropertyChange(evt);
+            }
+        });
+
+        panel1.setBackground(new java.awt.Color(51, 153, 255));
+
+        javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
+        panel1.setLayout(panel1Layout);
+        panel1Layout.setHorizontalGroup(
+            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        panel1Layout.setVerticalGroup(
+            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 74, Short.MAX_VALUE)
+        );
+
+        jSplitPaneHidari.setLeftComponent(panel1);
+
+        panel2.setBackground(new java.awt.Color(102, 204, 0));
+
+        javax.swing.GroupLayout panel2Layout = new javax.swing.GroupLayout(panel2);
+        panel2.setLayout(panel2Layout);
+        panel2Layout.setHorizontalGroup(
+            panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        panel2Layout.setVerticalGroup(
+            panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 74, Short.MAX_VALUE)
+        );
+
+        jSplitPaneHidari.setRightComponent(panel2);
+
+        jPorcentajeHidari.setText("50%");
+
+        javax.swing.GroupLayout hidariLayout = new javax.swing.GroupLayout(hidari);
+        hidari.setLayout(hidariLayout);
+        hidariLayout.setHorizontalGroup(
+            hidariLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(hidariLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(hidariLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Texto1Hidari)
+                    .addComponent(Opciones)
+                    .addGroup(hidariLayout.createSequentialGroup()
+                        .addGap(130, 130, 130)
+                        .addComponent(jOpcion1)
+                        .addGap(43, 43, 43)
+                        .addComponent(jOpcion4)
+                        .addGap(27, 27, 27)
+                        .addComponent(txtHidari1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(hidariLayout.createSequentialGroup()
+                        .addGap(130, 130, 130)
+                        .addComponent(jOpcion2)
+                        .addGap(43, 43, 43)
+                        .addComponent(jOpcion5)
+                        .addGap(27, 27, 27)
+                        .addComponent(numerosHidari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(184, 184, 184)
+                        .addComponent(jDesliz, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(hidariLayout.createSequentialGroup()
+                        .addGap(130, 130, 130)
+                        .addComponent(jOpcion3)
+                        .addGap(43, 43, 43)
+                        .addComponent(jOpcion6)
+                        .addGap(27, 27, 27)
+                        .addComponent(itemListHidari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(hidariLayout.createSequentialGroup()
+                        .addGap(688, 688, 688)
+                        .addComponent(jPorcentajeHidari))
+                    .addGroup(hidariLayout.createSequentialGroup()
+                        .addGap(598, 598, 598)
+                        .addComponent(jSplitPaneHidari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(hidariLayout.createSequentialGroup()
+                        .addGap(130, 130, 130)
+                        .addComponent(CorreoHidari)
+                        .addGap(38, 38, 38)
+                        .addComponent(txtCorreoHidari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)
+                        .addComponent(jCheckCorreo)
+                        .addGap(110, 110, 110)
+                        .addComponent(jAceptarHidari)
+                        .addGap(27, 27, 27)
+                        .addComponent(jRedondoHidari2)
+                        .addGap(34, 34, 34)
+                        .addComponent(jButtonAyudaHidari))
+                    .addGroup(hidariLayout.createSequentialGroup()
+                        .addGap(130, 130, 130)
+                        .addComponent(jContrasenyaHidari)
+                        .addGap(6, 6, 6)
+                        .addComponent(txtPassHidari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(61, Short.MAX_VALUE))
+        );
+        hidariLayout.setVerticalGroup(
+            hidariLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(hidariLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(hidariLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Texto1Hidari)
+                    .addComponent(Opciones))
+                .addGap(18, 18, 18)
+                .addGroup(hidariLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtHidari1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(hidariLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addGroup(hidariLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jOpcion1)
+                            .addComponent(jOpcion4))))
+                .addGap(12, 12, 12)
+                .addGroup(hidariLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(hidariLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(jOpcion2))
+                    .addGroup(hidariLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(jOpcion5))
+                    .addComponent(numerosHidari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(hidariLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(jDesliz, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(3, 3, 3)
+                .addGroup(hidariLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(itemListHidari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(hidariLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addGroup(hidariLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jOpcion3)
+                            .addComponent(jOpcion6))))
+                .addGap(2, 2, 2)
+                .addComponent(jPorcentajeHidari)
+                .addGap(37, 37, 37)
+                .addComponent(jSplitPaneHidari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(hidariLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtCorreoHidari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(hidariLayout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addGroup(hidariLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(CorreoHidari)
+                            .addComponent(jCheckCorreo)
+                            .addComponent(jAceptarHidari)
+                            .addComponent(jRedondoHidari2)
+                            .addComponent(jButtonAyudaHidari))))
+                .addGap(15, 15, 15)
+                .addGroup(hidariLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(hidariLayout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jContrasenyaHidari))
+                    .addComponent(txtPassHidari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(23, Short.MAX_VALUE))
+        );
+
+        jPanelBarraEstado.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jPanelBarraEstado.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanelBarraEstado.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jListo.setText("Listo");
+        jPanelBarraEstado.add(jListo);
 
         migi.setBorder(javax.swing.BorderFactory.createTitledBorder("Panel espejo"));
-        migi.setLayout(new java.awt.GridBagLayout());
-
-        Opciones1Migi.setText("Opciones:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(70, 35, 0, 0);
-        migi.add(Opciones1Migi, gridBagConstraints);
 
         jGrupoOpcionMigi.add(jOpcion1Migi);
         jOpcion1Migi.setText("Opcion 1");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 4;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(10, 84, 0, 0);
-        migi.add(jOpcion1Migi, gridBagConstraints);
 
         jGrupoOpcionMigi.add(jOpcion2Migi);
         jOpcion2Migi.setText("Opcion 2");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 4;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(13, 84, 0, 0);
-        migi.add(jOpcion2Migi, gridBagConstraints);
 
         jGrupoOpcionMigi.add(jOpcion3Migi);
         jOpcion3Migi.setText("Opcion 3");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridwidth = 4;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(19, 84, 0, 0);
-        migi.add(jOpcion3Migi, gridBagConstraints);
 
         CorreoMigi.setText("Correo");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(30, 84, 0, 0);
-        migi.add(CorreoMigi, gridBagConstraints);
 
         jContrasenyaMigi.setText("Contraseña:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 10;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(21, 84, 0, 0);
-        migi.add(jContrasenyaMigi, gridBagConstraints);
 
         txtPassMigi.setText("jPasswordField1");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 10;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipadx = 26;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 1, 58, 0);
-        migi.add(txtPassMigi, gridBagConstraints);
 
         txtCorreoMigi.setColumns(20);
-        txtCorreoMigi.setText("sunombre@gmail.com...");
+        txtCorreoMigi.setText("sunombre@gmail.com");
         txtCorreoMigi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCorreoMigiActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 6;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipadx = 219;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(27, 1, 0, 0);
-        migi.add(txtCorreoMigi, gridBagConstraints);
 
         jOpcion6Migi.setText("Opcion 6");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(19, 43, 0, 0);
-        migi.add(jOpcion6Migi, gridBagConstraints);
 
         jOpcion5Migi.setText("Opcion 5");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(13, 43, 0, 0);
-        migi.add(jOpcion5Migi, gridBagConstraints);
 
         jOpcion4Migi.setText("Opcion 4");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(10, 43, 0, 0);
-        migi.add(jOpcion4Migi, gridBagConstraints);
 
         txtMigi.setColumns(20);
         txtMigi.addActionListener(new java.awt.event.ActionListener() {
@@ -468,60 +429,10 @@ public class FlatLaf extends javax.swing.JFrame {
                 txtMigiActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 7;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipadx = 219;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(9, 27, 0, 0);
-        migi.add(txtMigi, gridBagConstraints);
 
-        Texto1Migi.setText("Texto 1:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(79, 27, 0, 0);
-        migi.add(Texto1Migi, gridBagConstraints);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(12, 27, 0, 0);
-        migi.add(jSpinnerMigi, gridBagConstraints);
-
-        jComboListMigi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 27, 0, 0);
-        migi.add(jComboListMigi, gridBagConstraints);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 13;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipadx = 164;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 32, 0, 0);
-        migi.add(jDeslizMigi, gridBagConstraints);
+        itemListMigi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jAceptarMigi.setText("Aceptar");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 13;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(27, 32, 0, 0);
-        migi.add(jAceptarMigi, gridBagConstraints);
 
         jRedondoMigi.setText("Redondo");
         jRedondoMigi.addActionListener(new java.awt.event.ActionListener() {
@@ -529,41 +440,216 @@ public class FlatLaf extends javax.swing.JFrame {
                 jRedondoMigiActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 14;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(27, 27, 0, 0);
-        migi.add(jRedondoMigi, gridBagConstraints);
 
         jButtonAyudaMigi.setText("?");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 16;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(27, 17, 0, 36);
-        migi.add(jButtonAyudaMigi, gridBagConstraints);
+
+        jCheckCorreoMigi.setEnabled(false);
+        jCheckCorreoMigi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckCorreoMigiActionPerformed(evt);
+            }
+        });
+
+        panel3.setBackground(new java.awt.Color(51, 153, 255));
+
+        javax.swing.GroupLayout panel3Layout = new javax.swing.GroupLayout(panel3);
+        panel3.setLayout(panel3Layout);
+        panel3Layout.setHorizontalGroup(
+            panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        panel3Layout.setVerticalGroup(
+            panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 74, Short.MAX_VALUE)
+        );
+
+        jSplitPaneMigi.setLeftComponent(panel3);
+
+        panel4.setBackground(new java.awt.Color(102, 204, 0));
+
+        javax.swing.GroupLayout panel4Layout = new javax.swing.GroupLayout(panel4);
+        panel4.setLayout(panel4Layout);
+        panel4Layout.setHorizontalGroup(
+            panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        panel4Layout.setVerticalGroup(
+            panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 74, Short.MAX_VALUE)
+        );
+
+        jSplitPaneMigi.setRightComponent(panel4);
+
+        jPorcentajeMigi.setText("50%");
+
+        javax.swing.GroupLayout migiLayout = new javax.swing.GroupLayout(migi);
+        migi.setLayout(migiLayout);
+        migiLayout.setHorizontalGroup(
+            migiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Opciones1Migi)
+            .addComponent(Texto1Migi)
+            .addGroup(migiLayout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addComponent(jOpcion1Migi)
+                .addGap(43, 43, 43)
+                .addComponent(jOpcion4Migi)
+                .addGap(27, 27, 27)
+                .addComponent(txtMigi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(migiLayout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addComponent(jOpcion2Migi)
+                .addGap(43, 43, 43)
+                .addComponent(jOpcion5Migi)
+                .addGap(27, 27, 27)
+                .addComponent(numerosMigi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(229, 229, 229)
+                .addComponent(jDeslizMigi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(migiLayout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addComponent(jOpcion3Migi)
+                .addGap(43, 43, 43)
+                .addComponent(jOpcion6Migi)
+                .addGap(27, 27, 27)
+                .addComponent(itemListMigi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(migiLayout.createSequentialGroup()
+                .addGap(697, 697, 697)
+                .addComponent(jPorcentajeMigi))
+            .addGroup(migiLayout.createSequentialGroup()
+                .addGap(607, 607, 607)
+                .addComponent(jSplitPaneMigi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(migiLayout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addComponent(CorreoMigi)
+                .addGap(38, 38, 38)
+                .addComponent(txtCorreoMigi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(jCheckCorreoMigi)
+                .addGap(145, 145, 145)
+                .addComponent(jAceptarMigi)
+                .addGap(27, 27, 27)
+                .addComponent(jRedondoMigi)
+                .addGap(34, 34, 34)
+                .addComponent(jButtonAyudaMigi))
+            .addGroup(migiLayout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addComponent(jContrasenyaMigi)
+                .addGap(6, 6, 6)
+                .addComponent(txtPassMigi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        migiLayout.setVerticalGroup(
+            migiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(migiLayout.createSequentialGroup()
+                .addGroup(migiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Opciones1Migi)
+                    .addComponent(Texto1Migi))
+                .addGap(18, 18, 18)
+                .addGroup(migiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtMigi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(migiLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addGroup(migiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jOpcion1Migi)
+                            .addComponent(jOpcion4Migi))))
+                .addGap(12, 12, 12)
+                .addGroup(migiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(migiLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(jOpcion2Migi))
+                    .addGroup(migiLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(jOpcion5Migi))
+                    .addComponent(numerosMigi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(migiLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(jDeslizMigi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(8, 8, 8)
+                .addGroup(migiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(itemListMigi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(migiLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addGroup(migiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jOpcion3Migi)
+                            .addComponent(jOpcion6Migi))))
+                .addGap(6, 6, 6)
+                .addComponent(jPorcentajeMigi)
+                .addGap(36, 36, 36)
+                .addComponent(jSplitPaneMigi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addGroup(migiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtCorreoMigi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jAceptarMigi)
+                    .addComponent(jRedondoMigi)
+                    .addComponent(jButtonAyudaMigi)
+                    .addGroup(migiLayout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addGroup(migiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(CorreoMigi)
+                            .addComponent(jCheckCorreoMigi))))
+                .addGap(18, 18, 18)
+                .addGroup(migiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(migiLayout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jContrasenyaMigi))
+                    .addComponent(txtPassMigi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+
+        jMenu1.setText("File");
+
+        jMenuArchivo.setText("Archivo");
+
+        jMenuItemSalir.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ESCAPE, 0));
+        jMenuItemSalir.setText("Salir");
+        jMenuItemSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemSalirActionPerformed(evt);
+            }
+        });
+        jMenuArchivo.add(jMenuItemSalir);
+
+        jMenu1.add(jMenuArchivo);
+
+        jMenuBar.add(jMenu1);
+
+        jMenu2.setText("Edit");
+
+        jMenuEdicion.setText("Edicion");
+
+        jMenuBorrarT.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_DELETE, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuBorrarT.setText("Borrar todo");
+        jMenuBorrarT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuBorrarTActionPerformed(evt);
+            }
+        });
+        jMenuEdicion.add(jMenuBorrarT);
+
+        jMenu2.add(jMenuEdicion);
+
+        jMenuBar.add(jMenu2);
+
+        setJMenuBar(jMenuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hidari, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(hidari, javax.swing.GroupLayout.DEFAULT_SIZE, 888, Short.MAX_VALUE)
-                    .addComponent(migi, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 888, Short.MAX_VALUE))
+                    .addComponent(migi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelBarraEstado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(hidari, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(hidari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(migi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanelBarraEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -603,7 +689,21 @@ public class FlatLaf extends javax.swing.JFrame {
 
     private void txtCorreoHidariKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCorreoHidariKeyReleased
         // TODO add your handling code here:
-        txtCorreoMigi.setText(txtCorreoHidari.getText());
+        //txtCorreoMigi.setText(txtCorreoHidari.getText());
+        String correo = txtCorreoHidari.getText();
+        txtCorreoMigi.setText(correo);
+        if (correoValido(correo)) {
+            txtCorreoHidari.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.GREEN, 2));
+            jCheckCorreo.setSelected(true);
+            jCheckCorreoMigi.setSelected(true);
+            actualizarEstado("✓ Correo valido: " + correo);
+        } else {
+            txtCorreoHidari.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.RED, 2));
+            jCheckCorreo.setSelected(true);
+            jCheckCorreoMigi.setSelected(true);
+            actualizarEstado("x Correo no valido");
+        }
+        
     }//GEN-LAST:event_txtCorreoHidariKeyReleased
 
     private void txtPassHidariKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPassHidariKeyReleased
@@ -651,24 +751,119 @@ public class FlatLaf extends javax.swing.JFrame {
         jOpcion6Migi.setSelected(jOpcion6.isSelected());
     }//GEN-LAST:event_jOpcion6ActionPerformed
 
-    private void jComboListHidariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboListHidariActionPerformed
+    private void itemListHidariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemListHidariActionPerformed
         // TODO add your handling code here:
-        jComboListMigi.setSelectedIndex(jComboListHidari.getSelectedIndex());
-    }//GEN-LAST:event_jComboListHidariActionPerformed
+        itemListMigi.setSelectedIndex(itemListHidari.getSelectedIndex());
+    }//GEN-LAST:event_itemListHidariActionPerformed
 
-    private void jSpinner1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner1StateChanged
+    private void numerosHidariStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_numerosHidariStateChanged
         // TODO add your handling code here:
-        jSpinnerMigi.setValue(jSpinner1.getValue());
+        numerosMigi.setValue(numerosHidari.getValue());
         
-    }//GEN-LAST:event_jSpinner1StateChanged
+    }//GEN-LAST:event_numerosHidariStateChanged
 
     private void jDeslizStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jDeslizStateChanged
         // TODO add your handling code here:
-        jDeslizMigi.setValue(jDesliz.getValue());
+        int valor = jDesliz.getValue();
+        jDeslizMigi.setValue(valor);
+        jPorcentajeHidari.setText(valor + "%");
+        jPorcentajeMigi.setText(valor + "%");
     }//GEN-LAST:event_jDeslizStateChanged
+
+    private void jMenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSalirActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jMenuItemSalirActionPerformed
+
+    private void jMenuBorrarTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuBorrarTActionPerformed
+        // TODO add your handling code here:
+        Texto1Hidari.setText("");
+        Texto1Migi.setText("");
+        txtCorreoHidari.setText("");
+        txtCorreoHidari.setBorder(javax.swing.UIManager.getBorder("TextField.border"));
+        txtCorreoMigi.setText("");
+        
+        txtPassHidari.setText("");
+        txtPassMigi.setText("");
+        
+        jGrupoOpcionHidari.clearSelection();
+        jGrupoOpcionMigi.clearSelection();
+        
+        jOpcion1.setSelected(false);
+        jOpcion2.setSelected(false);
+        jOpcion3.setSelected(false);
+        jOpcion4.setSelected(false);
+        jOpcion5.setSelected(false);
+        jOpcion6.setSelected(false);
+        
+        jOpcion1Migi.setSelected(false);
+        jOpcion2Migi.setSelected(false);
+        jOpcion3Migi.setSelected(false);
+        jOpcion4Migi.setSelected(false);
+        jOpcion5Migi.setSelected(false);
+        jOpcion6Migi.setSelected(false);
+        
+        jCheckCorreo.setSelected(false);
+        jCheckCorreoMigi.setSelected(false);
+        
+        itemListHidari.setSelectedIndex(0);
+        itemListMigi.setSelectedIndex(0);
+        
+        numerosHidari.setValue(0);
+        numerosMigi.setValue(0);
+        
+        jDesliz.setValue(50);
+        jDeslizMigi.setValue(50);
+        
+        jPorcentajeHidari.setText("50%");
+        jPorcentajeHidari.setText("50%");
+        
+        jSplitPaneHidari.setDividerLocation(100);
+        jSplitPaneMigi.setDividerLocation(100);
+        
+        actualizarEstado("Valores reestablecidos.");
+    }//GEN-LAST:event_jMenuBorrarTActionPerformed
+
+    private void jCheckCorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckCorreoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckCorreoActionPerformed
+
+    private void jCheckCorreoMigiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckCorreoMigiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckCorreoMigiActionPerformed
+
+    private void jSplitPaneHidariPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jSplitPaneHidariPropertyChange
+        // TODO add your handling code here:
+        if ("dividerLocation".equals(evt.getPropertyName())) {
+            jSplitPaneMigi.setDividerLocation(jSplitPaneHidari.getDividerLocation());
+        }
+    }//GEN-LAST:event_jSplitPaneHidariPropertyChange
 
     private String txtInv(String txt) {
         return new StringBuilder(txt).reverse().toString();
+    }
+    
+    private boolean correoValido(String correo) {
+        String regex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$";
+        return correo.matches(regex);
+    }
+    
+    private void actualizarEstado(String msg) {
+        jListo.setText(msg);
+    }
+    
+    private void configurarPropiedadesFlatLaf() {
+        //Boton redondo
+        jRedondoHidari2.putClientProperty(com.formdev.flatlaf.FlatClientProperties.BUTTON_TYPE, com.formdev.flatlaf.FlatClientProperties.BUTTON_TYPE_ROUND_RECT);
+        jRedondoMigi.putClientProperty(com.formdev.flatlaf.FlatClientProperties.BUTTON_TYPE, com.formdev.flatlaf.FlatClientProperties.BUTTON_TYPE_ROUND_RECT);
+    
+        //Boton ayuda
+        jButtonAyudaHidari.putClientProperty(com.formdev.flatlaf.FlatClientProperties.BUTTON_TYPE, com.formdev.flatlaf.FlatClientProperties.BUTTON_TYPE_HELP);
+        jButtonAyudaMigi.putClientProperty(com.formdev.flatlaf.FlatClientProperties.BUTTON_TYPE, com.formdev.flatlaf.FlatClientProperties.BUTTON_TYPE_HELP);
+    
+        //Añadir ojito
+        txtPassHidari.putClientProperty(com.formdev.flatlaf.FlatClientProperties.STYLE, "showRevealButton: true");
+        txtPassMigi.putClientProperty(com.formdev.flatlaf.FlatClientProperties.STYLE, "showRevealButton: true");
     }
     
     /**
@@ -695,18 +890,28 @@ public class FlatLaf extends javax.swing.JFrame {
     private javax.swing.JLabel Texto1Hidari;
     private javax.swing.JLabel Texto1Migi;
     private javax.swing.JPanel hidari;
+    private javax.swing.JComboBox<String> itemListHidari;
+    private javax.swing.JComboBox<String> itemListMigi;
     private javax.swing.JButton jAceptarHidari;
     private javax.swing.JButton jAceptarMigi;
     private javax.swing.JButton jButtonAyudaHidari;
     private javax.swing.JButton jButtonAyudaMigi;
-    private javax.swing.JComboBox<String> jComboListHidari;
-    private javax.swing.JComboBox<String> jComboListMigi;
+    private javax.swing.JCheckBox jCheckCorreo;
+    private javax.swing.JCheckBox jCheckCorreoMigi;
     private javax.swing.JLabel jContrasenyaHidari;
     private javax.swing.JLabel jContrasenyaMigi;
     private javax.swing.JSlider jDesliz;
     private javax.swing.JSlider jDeslizMigi;
     private javax.swing.ButtonGroup jGrupoOpcionHidari;
     private javax.swing.ButtonGroup jGrupoOpcionMigi;
+    private javax.swing.JLabel jListo;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenuArchivo;
+    private javax.swing.JMenuBar jMenuBar;
+    private javax.swing.JMenuItem jMenuBorrarT;
+    private javax.swing.JMenu jMenuEdicion;
+    private javax.swing.JMenuItem jMenuItemSalir;
     private javax.swing.JRadioButton jOpcion1;
     private javax.swing.JRadioButton jOpcion1Migi;
     private javax.swing.JRadioButton jOpcion2;
@@ -719,11 +924,20 @@ public class FlatLaf extends javax.swing.JFrame {
     private javax.swing.JCheckBox jOpcion5Migi;
     private javax.swing.JCheckBox jOpcion6;
     private javax.swing.JCheckBox jOpcion6Migi;
+    private javax.swing.JPanel jPanelBarraEstado;
+    private javax.swing.JLabel jPorcentajeHidari;
+    private javax.swing.JLabel jPorcentajeMigi;
     private javax.swing.JButton jRedondoHidari2;
     private javax.swing.JButton jRedondoMigi;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JSpinner jSpinnerMigi;
+    private javax.swing.JSplitPane jSplitPaneHidari;
+    private javax.swing.JSplitPane jSplitPaneMigi;
     private javax.swing.JPanel migi;
+    private javax.swing.JSpinner numerosHidari;
+    private javax.swing.JSpinner numerosMigi;
+    private java.awt.Panel panel1;
+    private java.awt.Panel panel2;
+    private java.awt.Panel panel3;
+    private java.awt.Panel panel4;
     private javax.swing.JTextField txtCorreoHidari;
     private javax.swing.JTextField txtCorreoMigi;
     private javax.swing.JTextField txtHidari1;
