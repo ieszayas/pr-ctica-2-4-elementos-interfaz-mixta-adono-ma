@@ -97,8 +97,7 @@ public class FlatLaf extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(900, 700));
-        setResizable(false);
-        setSize(new java.awt.Dimension(900, 700));
+        setSize(new java.awt.Dimension(1000, 700));
 
         hidari.setBorder(javax.swing.BorderFactory.createTitledBorder("GUI Mixta"));
 
@@ -324,7 +323,7 @@ public class FlatLaf extends javax.swing.JFrame {
                         .addComponent(jContrasenyaHidari)
                         .addGap(6, 6, 6)
                         .addComponent(txtPassHidari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
         hidariLayout.setVerticalGroup(
             hidariLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
